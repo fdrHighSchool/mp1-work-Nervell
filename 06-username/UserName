@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserName {
     public static void main(String[] args) {
-        randomLetters(8);
+        ;
         // create Scanner object
         Scanner s = new Scanner(System.in);
 
@@ -29,6 +29,11 @@ public class UserName {
             System.out.println(ANSI_RED + "Check your data");
         }
 
+        //passwordGeneration
+        System.out.println("How long your password should be?");
+        int howLong = s.nextInt();
+        System.out.print("Your password is" + generatePassword(howLong));
+
         s.close();
     } // end main method
 
@@ -46,15 +51,13 @@ public class UserName {
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_BLUE = "\u001B[34m";
 
-    public static String randomLetters(int length) {
-        Scanner s = new Scanner(System.in);
-        System.out.println("How long your password should be?");
-        int howLong = s.nextInt();
+    public static String generatePassword(int length) {
         String passWord = "";
-        for (int i = 0; i < howLong; i++) {
+        for (int i = 2; i < length; i++) {
             int rand = (int)(Math.random()*(90-65+1) + 65);
-            char c = char(rand);
+            char c = (char)rand;
             passWord = passWord + c;
         }
+        return passWord;
     }
 } // end class
