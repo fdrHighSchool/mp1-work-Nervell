@@ -54,14 +54,9 @@ public class UserName {
     public static String generatePassword(int length) {
         String passWord = "";
         for (int i = 0; i < length; i++) {
-            if ((i % 2) == 0) {
-                int rand = (int)(Math.random()*(122-65+1) + 65);
-                char c = (char)rand;
-                passWord = passWord + c;
-            } else if ((i % 2) == 1) {
-                int randomNum = (int)(Math.random() * 9)  + 1;
-                passWord = passWord + randomNum;
-            }
+            int rand = (int)(Math.random()*(122-48+1) + 48);
+            char c = (char)rand;
+            passWord = passWord + c;
         }
         return passWord;
     }
