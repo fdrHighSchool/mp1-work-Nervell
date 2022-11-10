@@ -20,6 +20,6 @@ public class Main {
             } else {
                 System.out.println("Number is " + i + " and it's displayed");
             }
-        }*
+        }*/
     }
 }
