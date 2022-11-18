@@ -2,11 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Enter your grade: ");
-        Scanner s = new Scanner(System.in);
-        int num;
-        num = s.nextInt();
-        System.out.println(grade(num));
+        System.out.print("Enter your grade: "); Scanner s = new Scanner(System.in); int num = s.nextInt(); System.out.println(grade(num));
     }
 
     public static String grade(int num) {
